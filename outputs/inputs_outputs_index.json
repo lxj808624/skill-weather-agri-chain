@@ -1,0 +1,78 @@
+{
+ "root": "/Users/since/coding-projects/trading-ip-projects/skill-weather-agri-chain",
+ "path_convention": "相对路径以 root 为基准",
+ "read_order": [
+  "SKILL.md",
+  "docs/研究报告.md",
+  "docs/研究设计.md",
+  "outputs/inputs_outputs_index.json"
+ ],
+ "docs": [
+  "docs/研究报告.md",
+  "docs/研究设计.md"
+ ],
+ "scripts": [
+  "scripts/evaluate.py",
+  "scripts/fetch_fundamentals.py",
+  "scripts/fetch_futures_daily.py",
+  "scripts/fetch_weather.py",
+  "scripts/mcp_client.py",
+  "scripts/panel_weather.py",
+  "scripts/robustness.py"
+ ],
+ "review": [
+  "review/round-1-facts.md",
+  "review/round-2-method.md",
+  "review/round-3-delivery.md"
+ ],
+ "references": [
+  "references/cost-model.md",
+  "references/failure-boundaries.md"
+ ],
+ "inputs": {
+  "config": [
+   "config/regions.yaml"
+  ],
+  "data": [
+   "data/basis_M.parquet",
+   "data/futures_daily_M.parquet",
+   "data/inventory_M.parquet",
+   "data/weather_archive.parquet",
+   "data/weather_forecast.parquet",
+   "data/weather_panel.parquet"
+  ],
+  "external_api": [
+   "https://archive-api.open-meteo.com/v1/archive",
+   "https://historical-forecast-api.open-meteo.com/v1/forecast",
+   "PandaData MCP: get_future_daily / get_future_inventory / get_future_basis"
+  ]
+ },
+ "outputs": [
+  "outputs/fdr_lag_scan.csv",
+  "outputs/lag_scan.csv",
+  "outputs/lag_scan_h1.csv",
+  "outputs/lag_scan_h20.csv",
+  "outputs/lag_scan_h5.csv",
+  "outputs/model_compare.csv",
+  "outputs/model_compare_h1.csv",
+  "outputs/model_compare_h20.csv",
+  "outputs/model_compare_h5.csv",
+  "outputs/season_split.csv",
+  "outputs/season_split_h1.csv",
+  "outputs/season_split_h20.csv",
+  "outputs/season_split_h5.csv",
+  "outputs/walk_forward.csv",
+  "outputs/yearly_ic.csv",
+  "outputs/inputs_outputs_index.json",
+  "outputs/run_meta.json"
+ ],
+ "key_numbers": {
+  "h1_oos_r2": -0.0228,
+  "h5_oos_r2": -0.0844,
+  "h20_oos_r2": -0.0312,
+  "baseline_b3_h1_oos_r2": -0.0112,
+  "fdr_pass": 0,
+  "fdr_min_p": 0.0784,
+  "is_end": "2022-12-31"
+ }
+}
