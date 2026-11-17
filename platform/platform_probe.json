@@ -1,0 +1,40 @@
+{
+ "mcp_endpoint": "https://pandadatamcp.pandaaiquant.com/mcp",
+ "token_source": "QuantStudio 平台 OAuth（~/.dsh-quantstudio/quantskills/panda-mcp/oauth.json）",
+ "probed_at": "2026-11-18T00:53:36",
+ "runs": [
+  {
+   "method": "get_future_daily",
+   "args": {
+    "symbol": "M2409.DCE",
+    "start_date": "2024-05-01",
+    "end_date": "2024-08-30"
+   },
+   "n_rows": 0,
+   "status": "empty",
+   "size": 0
+  },
+  {
+   "method": "get_future_inventory",
+   "args": {
+    "symbol": "M",
+    "start_date": "2019-01-01",
+    "end_date": "2019-12-31"
+   },
+   "n_rows": 0,
+   "status": "empty"
+  },
+  {
+   "method": "get_future_basis",
+   "args": {
+    "underlying_symbol": "M",
+    "start_date": "2024-01-02",
+    "end_date": "2024-02-29"
+   },
+   "n_rows": 37,
+   "status": "ok"
+  }
+ ],
+ "finding": "提交前复测：基差接口正常返回，日线/库存接口返回空。与 11-17 取数相同的参数，说明是服务端状态变化，不是参数或令牌问题。冻结数据以 11-17 快照为准（见 data/ 与 fetch 日志）。",
+ "conclusion": "平台授权通道可用（基差调用成功即证明令牌有效）；日线接口的空返回已列入失败边界，复跑者需先探测接口状态再取数。"
+}
