@@ -1,0 +1,17 @@
+{
+ "source": "fc",
+ "n_rows": 1899,
+ "range": [
+  "2018-01-02",
+  "2025-10-31"
+ ],
+ "is_end": "2022-12-31",
+ "weather_cols": [
+  "precip7_fc",
+  "precip14_fc",
+  "precip30_fc",
+  "temp7_fc",
+  "temp14_fc",
+  "temp30_fc"
+ ]
+}
