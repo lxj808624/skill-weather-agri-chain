@@ -53,7 +53,6 @@
   "outputs/lag_scan_h1.csv",
   "outputs/lag_scan_h20.csv",
   "outputs/lag_scan_h5.csv",
-  "outputs/model_compare.csv",
   "outputs/model_compare_h1.csv",
   "outputs/model_compare_h20.csv",
   "outputs/model_compare_h5.csv",
@@ -64,7 +63,8 @@
   "outputs/walk_forward.csv",
   "outputs/yearly_ic.csv",
   "outputs/inputs_outputs_index.json",
-  "outputs/run_meta.json"
+  "outputs/run_meta.json",
+  "outputs/archive/model_compare_legacy_20261118.csv"
  ],
  "key_numbers": {
   "h1_oos_r2": -0.0228,
@@ -74,5 +74,6 @@
   "fdr_pass": 0,
   "fdr_min_p": 0.0784,
   "is_end": "2022-12-31"
- }
+ },
+ "version_note": "v2：清理遗留产物——outputs/model_compare.csv 是 2026-11-18 00:45 的早期运行（少 11 个特征、数值与报告不一致），已移入 outputs/archive/ 并在 SKILL 中改指 model_compare_h{1,5,20}.csv；lag_scan.csv 为 lag_scan_h1.csv 的同内容副本。"
 }
