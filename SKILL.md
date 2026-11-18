@@ -55,8 +55,8 @@ platform: QuantStudio (PandaData MCP + 外部气象 API)
 |---|---|
 | `data/weather_panel.parquet` | 12 网格点 → 州 → 产量加权的美豆带天气序列（双口径） |
 | `data/futures_daily_M.parquet` | 豆粕主力连续日线 |
-| `outputs/lag_scan.csv` | K∈{7,14,30} × 滞后 0/5/10/20/40 的 IC / t / R² |
-| `outputs/model_compare.csv` | B1 季节 → B2 价格 → B3 供需 → W 天气 的 IS/OOS 对照 |
+| `outputs/lag_scan_h{1,5,20}.csv` | K∈{7,14,30} × 滞后 0/5/10/20/40 的 IC / t / R²；`lag_scan.csv` 是 h1 的同内容副本（历史命名） |
+| `outputs/model_compare_h{1,5,20}.csv` | 次日/一周/一月三个窗口上 B1 季节 → B2 价格 → B3 供需 → W 天气 的 IS/OOS 对照（报告与结论均以此三份为准） |
 | `outputs/season_split.csv` | 生长季 / 鼓粒期 / 非生长季的失效区间检验 |
 
 ## 复跑
